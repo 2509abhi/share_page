@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      padding: 8% 10%;
+    }
+    #body {
+      display: flex;
+    }
+    .container{
+      padding: 0 3rem;
+    }
+    .drawers {
+      width: 500px;
+    }
+    .Michelle {
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+      margin-top: 30px;
+      margin-left: 20px;
+      margin-right: 30px;
+    }
+
+    .con {
+      display: flex;
+    }
+    .concon{
+      width: 300px;
+
+    }
+    .share{
+      height: 30px;
+      margin-top: 30px;
+    }
+      .points{
+        display: none;
+      }
+    .point {
+      display: flex;
+      color: rgb(92, 92, 211);
+      background-color: rgb(59, 59, 87);
+      position: relative;
+      width: 300px;
+      height: 50px;
+      text-align: center;
+      padding: 0 3rem;
+      padding-top: 1rem;
+      border-radius: 30px;
+      box-shadow: 2px 2px 4px #888;
+      margin-left: 150px;
+    }
+
+    .point:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 250px;
+      top: 40px;
+      border: 23px solid;
+      border-color: rgb(59, 59, 87) transparent transparent rgb(59, 59, 87);
+    }
+    .icon{
+      width: 20px;
+      height: 40px;
+      padding: 0 2rem;
+    }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main id="body">
+    <img class="drawers" src="images/drawers.jpg" alt="drawers">
+    <div class="container">
+      <h1>Shift the overall look and feel by adding these wonderful
+        touches to furniture in your home</h1>
+
+      <p>Ever been in a room and felt like something was missing? Perhaps
+        it felt slightly bare and uninviting. I've got some simple tips
+        to help you make any room feel complete.</p>
+        <div class="con points">
+          <h3>Share</h3>
+          <img class="icon" src="images/icon-facebook.svg" alt="icon-facebook">
+          <img class="icon" src="images/icon-twitter.svg" alt="icon-twitter">
+          <img class="icon" src="images/icon-pinterest.svg" alt="icon-pinterest">
+        </div>
+      <div class="con data">
+        <img class="Michelle" src="images/avatar-michelle.jpg" alt="Michelle">
+        <div class="concon">
+          <h3>Michelle Appleton</h3>
+          <p>28 Jun 2020</p>
+        </div>
+        <img class="share" src="images/icon-share.svg" alt="share">
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Abhishek Bansal</a>.</p>
+  </div>
+  <script>
+    document.querySelector(".share").addEventListener("click", function(){
+      // document.querySelector(".point").style.display = "flex";
+      document.querySelector(".points").classList.toggle("point");
+      console.log("hi");
+    });
+      </script>
+</body>
+
+</html>
